@@ -7,7 +7,7 @@
 import { Command } from "commander";
 import { parseCenter, parsePoints, rotate } from "../rotate.js";
 
-const rotateCmd = new Command()
+const rotateCmd = new Command("rotate")
   .action((pointsStr: string, angleStr: string, centerStr: string) => {
     try {
       const points = parsePoints(pointsStr);
@@ -48,7 +48,6 @@ const rotateCmd = new Command()
   )
   .argument("<angle>", "Angle to rotate (degrees)")
   .argument("<center>", "Center point, e.g., '(256,256)'")
-  .description("Rotate point(s) around a center point")
-  .name("rotate");
+  .description("Rotate point(s) around a center point");
 
 export { rotateCmd };

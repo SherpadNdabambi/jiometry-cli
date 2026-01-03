@@ -4,6 +4,7 @@
  * @description Main entry point for the app
  */
 import { Command } from "commander";
+import { formatCmd } from "./commands/formatCmd.js";
 import { rotateCmd } from "./commands/rotateCmd.js";
 
 const program = new Command()
@@ -11,6 +12,6 @@ const program = new Command()
   .name("jiometry-cli")
   .version("1.0.0");
 
-program.addCommand(rotateCmd);
+program.addCommand(formatCmd).addCommand(rotateCmd);
 
 program.parse();

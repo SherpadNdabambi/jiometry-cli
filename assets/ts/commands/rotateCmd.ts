@@ -1,3 +1,9 @@
+/**
+ * @file rotateCmd.ts
+ * @description Module containing the rotate command
+ * 
+ * @exports rotateCmd
+ */
 import { Command } from "commander";
 import { parseCenter, parsePoint, parsePoints, rotate } from "../rotate.js";
 

@@ -1,5 +1,8 @@
 #!/usr/bin/env node
-
+/**
+ * @file cli.ts
+ * @description Main entry point for the app
+ */
 import { Command } from "commander";
 import { rotateCmd } from "./commands/rotateCmd.js";
 

@@ -1,13 +1,22 @@
-import { Command } from "commander";
-import { Console } from "console";
+/**
+ * @file rotate.ts
+ * @description Module containing the rotate function and related utilities
+ * 
+ * @exports parseCenter
+ * @exports parsePoint
+ * @exports parsePoints
+ * @exports rotate
+ */
 
 /**
  * Rotates a point about a center point.
+ * 
  * @param x The x-coordinate of the point to be rotated.
  * @param y The y-coordinate of the point to be rotated.
  * @param angle The angle to rotate the point (in degrees).
  * @param cx The x-coordinate of the center point.
  * @param cy The y-coordinate of the center point.
+ * 
  * @returns The new coordinates of the point after rotation.
  */
 function rotate(
@@ -65,7 +74,9 @@ function parsePoints(pointsStr: string): number[][] {
 
 /**
  * Parses a single point string like "(50,96)" into [50, 96].
+ * 
  * @param pointStr The point string.
+ * 
  * @returns [x, y] or null if invalid.
  */
 function parsePoint(pointStr: string): number[] | null {
@@ -87,7 +98,9 @@ function parsePoint(pointStr: string): number[] | null {
 
 /**
  * Parses center string: either "(cx,cy)" or separate cx cy as fallback.
+ * 
  * @param centerStr Center input.
+ * 
  * @returns [cx, cy].
  */
 function parseCenter(centerStr: string): [number, number] {
@@ -101,7 +114,5 @@ function parseCenter(centerStr: string): [number, number] {
     `Invalid center format: ${centerStr}. Use "(cx,cy)" or pass separate cx cy.`
   );
 }
-
-
 
 export { parseCenter, parsePoint, parsePoints, rotate };

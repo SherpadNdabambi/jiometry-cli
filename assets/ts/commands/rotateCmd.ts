@@ -1,11 +1,11 @@
 /**
  * @file rotateCmd.ts
  * @description Module containing the rotate command
- * 
+ *
  * @exports rotateCmd
  */
 import { Command } from "commander";
-import { parseCenter, parsePoint, parsePoints, rotate } from "../rotate.js";
+import { parseCenter, parsePoints, rotate } from "../rotate.js";
 
 const rotateCmd = new Command()
   .action((pointsStr: string, angleStr: string, centerStr: string) => {
